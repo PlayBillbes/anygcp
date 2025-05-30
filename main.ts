@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
 // Replace with the actual address of your VLESS server that accepts WebSocket connections
-const VLESS_SERVER_WS_URL = "wss://c.modsbots.ddnsfree.com/";
+const VLESS_SERVER_WS_URL = "wss://d.modsbots.kozow.com//nrfwtxqea2mXlDPw?ed=2560"; // Updated based on user's VLESS config
 
 async function handler(req: Request): Promise<Response> {
     const upgrade = req.headers.get("upgrade") || "";
@@ -28,7 +28,7 @@ async function handler(req: Request): Promise<Response> {
             };
 
             // Event listener for messages from the VLESS server
-            vlessServerSocket.onmessage = (event) => {
+            clientSocket.onmessage = (event) => {
                 // Forward VLESS server message to the client
                 if (clientSocket.readyState === WebSocket.OPEN) {
                     clientSocket.send(event.data);
