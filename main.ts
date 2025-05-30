@@ -2,7 +2,7 @@ import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
 // Read the VLESS server URL from an environment variable
 // Provide a fallback or throw an error if it's not set
-const VLESS_SERVER_WS_URL = Deno.env.get("VLESS_SERVER_URL") || 'wss://northflanks.modsbots.com';
+const VLESS_SERVER_WS_URL = Deno.env.get("VLESS_SERVER_URL") || 'wss://p01--kmkls--lvl2l4gkm4y9.code.run';
 
 if (!VLESS_SERVER_WS_URL) {
     console.error("VLESS_SERVER_URL environment variable is not set. Exiting.");
