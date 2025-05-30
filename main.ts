@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
 // Replace with the actual address of your VLESS server that accepts WebSocket connections
-const VLESS_SERVER_WS_URL = "wss://47.128.249.85:21835";
+const VLESS_SERVER_WS_URL = "wss://47.128.249.85";
 
 async function handler(req: Request): Promise<Response> {
     const upgrade = req.headers.get("upgrade") || "";
